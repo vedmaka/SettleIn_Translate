@@ -1,0 +1,51 @@
+{
+	"name": "SettleTranslate",
+	"version": "0.0.1",
+	"author": [
+		""
+	],
+	"url": "https://www.mediawiki.org/wiki/Extension:SettleTranslate",
+	"descriptionmsg": "settletranslate-desc",
+	"license-name": "MIT",
+	"type": "other",
+	"AutoloadClasses": {
+        "SettleTranslate": "SettleTranslate.class.php",
+		"SettleTranslateHooks": "SettleTranslate.hooks.php",
+		"SpecialSettleTranslate": "specials/SpecialSettleTranslate.php"
+	},
+	"config": {
+		"SettleTranslateDomains": []
+	},
+	"callback": "SettleTranslateHooks::onExtensionLoad",
+	"ExtensionMessagesFiles": {
+		"SettleTranslateAlias": "SettleTranslate.i18n.alias.php",
+		"SettleTranslateMagic": "SettleTranslate.i18n.magic.php"
+	},
+	"Hooks": {
+		"ParserFirstCallInit": [
+			"SettleTranslateHooks::onParserFirstCallInit"
+		]
+	},
+	"MessagesDirs": {
+		"SettleTranslate": [
+			"i18n"
+		]
+	},
+	"ResourceModules": {
+		"ext.settletranslate.window": {
+			"scripts": [
+				"modules/ext.SettleTranslate.js"
+			],
+			"styles": [
+				"modules/ext.SettleTranslate.css"
+			]
+		}
+	},
+	"ResourceFileModulePaths": {
+		"localBasePath": "",
+		"remoteExtPath": "SettleTranslate"
+	},
+	"SpecialPages": {
+		"SettleTranslate": "SpecialSettleTranslate"
+	}
+}

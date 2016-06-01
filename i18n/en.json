@@ -1,0 +1,11 @@
+{
+  "@metadata": {
+    "authors": []
+  },
+  "settletranslate-desc": "This is an example extension",
+  "settletranslate-i18n-welcome": "Welcome to the localization file of the SettleTranslate extension.",
+  "settle-translate-link-text": "Translate",
+  "settle-translate-intro-text": "Please choose language you want this page to be translated to:",
+  "settle-translate-btn-translate": "Translate",
+  "settle-translate-modal-title": "Select language"
+}
