@@ -12,7 +12,7 @@ $(function(){
         var translations = window.wgPageAvailableTranslations || [];
         $('#translate-window select option').each(function(i,v){
             var lang = $(v).data('lang');
-            if( lang && $.inArray( lang, translations ) ) {
+            if( lang && ($.inArray( lang, translations ) != -1) ) {
                 $(v).prop('disabled', true);
             }
         });
