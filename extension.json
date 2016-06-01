@@ -24,6 +24,9 @@
 	"Hooks": {
 		"ParserFirstCallInit": [
 			"SettleTranslateHooks::onParserFirstCallInit"
+		],
+		"sfHTMLBeforeForm": [
+			"SettleTranslateHooks::onsfHTMLBeforeForm"
 		]
 	},
 	"MessagesDirs": {
@@ -38,6 +41,11 @@
 			],
 			"styles": [
 				"modules/ext.SettleTranslate.css"
+			]
+		},
+		"ext.settletranslate.badge": {
+			"styles": [
+				"modules/ext.SettleTranslate.badge.css"
 			]
 		}
 	},
