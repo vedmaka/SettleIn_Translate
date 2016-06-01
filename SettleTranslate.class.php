@@ -82,12 +82,13 @@ class SettleTranslate {
 		$page = WikiPage::factory( $parser->getTitle() );
 		$pageText = $page->getContent()->getWikitextForTransclusion();
 
+		//TODO: DO NOT PASS TITLE TOO!
 		//Title
-		$matches = array();
+		/*$matches = array();
 		$match = preg_match('#\|Title=(.+)#', $pageText, $matches);
 		if( $match ) {
 			$html .= self::makeInput( $templateName.'[Title]', $matches[1] );
-		}
+		}*/
 
 		//Country
 		$matches = array();
