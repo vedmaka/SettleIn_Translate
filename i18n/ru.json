@@ -1,0 +1,12 @@
+{
+  "@metadata": {
+    "authors": []
+  },
+  "settletranslate-desc": "This extension provides Translation support specific for SettleIn project",
+  "settletranslate-i18n-welcome": "Welcome to the localization file of the SettleTranslate extension.",
+  "settle-translate-link-text": "Перевести",
+  "settle-translate-intro-text": "Пожалуйста, выберите язык на который вы хотите перевести эту страницу:",
+  "settle-translate-btn-translate": "Создать превод",
+  "settle-translate-modal-title": "Выбор языка",
+  "settle-translate-form-warning": "<b>Внимание!</b> Содержимое данной формы было загрудено из <b>$1</b> версии вики для вашего удобства. Пожалуйста, не сохраняйте форму в неизменном виде."
+}
