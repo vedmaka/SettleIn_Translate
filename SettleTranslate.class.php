@@ -49,6 +49,10 @@ class SettleTranslate {
 
 		$title = $parser->getTitle();
 
+		if( !$title || !$title->exists() ) {
+			return '';
+		}
+
 		$parser->getOutput()->addModules( 'ext.settletranslate.window' );
 
 		$html .= $parser->insertStripItem(
