@@ -10,7 +10,33 @@ class SettleTranslate {
 
 	/**
 	 * @param Parser $parser
-	 *
+	 * @return string
+	 */
+	public static function renderForeign( $parser ) {
+
+		global $wgLanguageCode;
+
+		$html = '';
+
+		$currentTitle = $wgLanguageCode . ':' . $parser->getTitle()->getBaseText();
+		$selfSource = self::extractSelfSource( $parser->getTitle() );
+
+		$html .= '<div class="foreign-render-list" data-currenttitle="'.$currentTitle.'" data-selfsource="'.$selfSource.'">';
+		$html .= '</div>';
+
+		$parser->getOutput()->addModules('ext.settletranslate.foreign');
+
+		return array(
+			$html,
+			'isHTML'  => true,
+			'noparse' => true,
+			'markerType' => 'none'
+		);
+
+	}
+
+	/**
+	 * @param Parser $parser
 	 * @return string
 	 */
 	public static function renderLink( $parser ) {
@@ -63,6 +89,22 @@ class SettleTranslate {
 	public static function makeInput( $name, $value )
 	{
 		return '<input type="hidden" name="'.$name.'" value="'.str_replace('"', "", str_replace( "\n", "", $value ) ).'" />';
+	}
+
+	public static function extractSelfSource( $title ) {
+
+		$page = WikiPage::factory( $title );
+		$pageText = $page->getContent()->getWikitextForTransclusion();
+
+		//Country
+		$matches = array();
+		$match = preg_match('#\|Foreign source=(.+)#', $pageText, $matches);
+		if( $match ) {
+			return $matches[1];
+		}
+
+		return false;
+
 	}
 
 	/**

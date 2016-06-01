@@ -11,7 +11,8 @@
 	"AutoloadClasses": {
         "SettleTranslate": "SettleTranslate.class.php",
 		"SettleTranslateHooks": "SettleTranslate.hooks.php",
-		"SpecialSettleTranslate": "specials/SpecialSettleTranslate.php"
+		"SpecialSettleTranslate": "specials/SpecialSettleTranslate.php",
+		"SettleTranslateApi": "includes/SettleTranslate.api.php"
 	},
 	"config": {
 		"SettleTranslateDomains": []
@@ -27,6 +28,9 @@
 		],
 		"sfHTMLBeforeForm": [
 			"SettleTranslateHooks::onsfHTMLBeforeForm"
+		],
+		"ResourceLoaderGetConfigVars": [
+			"SettleTranslateHooks::onResourceLoaderGetConfigVars"
 		]
 	},
 	"MessagesDirs": {
@@ -47,6 +51,15 @@
 			"styles": [
 				"modules/ext.SettleTranslate.badge.css"
 			]
+		},
+		"ext.settletranslate.foreign": {
+			"styles": [
+
+			],
+			"scripts": [
+				"modules/ext.SettleForeignQuery.js",
+				"modules/ext.foreign.init.js"
+			]
 		}
 	},
 	"ResourceFileModulePaths": {
@@ -55,5 +68,8 @@
 	},
 	"SpecialPages": {
 		"SettleTranslate": "SpecialSettleTranslate"
+	},
+	"APIModules": {
+		"foreign": "SettleTranslateApi"
 	}
 }
