@@ -8,5 +8,7 @@
   "settle-translate-intro-text": "Please choose language you want this page to be translated to:",
   "settle-translate-btn-translate": "Create translation",
   "settle-translate-modal-title": "Select language",
-  "settle-translate-form-warning": "<b>Warning!</b> Contents of this form were pre-loaded from <b>$1</b> language version for reference. Please do not save form in this state without modificaitons."
+  "settle-translate-form-warning": "<b>Warning!</b> Contents of this form were pre-loaded from <b>$1</b> language version for reference. Please do not save form in this state without modificaitons.",
+  "settle-translate-foreign-title": "This page in other languages:",
+  "settle-translate-foreign-title-not-found": "No translations yet."
 }
