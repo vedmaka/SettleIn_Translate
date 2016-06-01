@@ -256,11 +256,11 @@ class SettleTranslate {
 		}
 
 		//Content
-		$matches = array();
+		/*$matches = array();
 		$match = preg_match('/\\|Content=([^\\|]+)/m', $pageText, $matches);
 		if( $match ) {
 			$html .= self::makeInput( $templateName.'[Content]', $matches[1] );
-		}
+		}*/
 
 		return $html;
 
