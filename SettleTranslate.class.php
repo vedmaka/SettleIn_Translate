@@ -69,7 +69,7 @@ class SettleTranslate {
 		$html .= '<div class="modal-header"><button type="button" class="close" data-dismiss="modal" aria-label="Close"><span aria-hidden="true">×</span></button><h4 class="modal-title" id="mySmallModalLabel">' . wfMessage( 'settle-translate-modal-title' ) . '</h4></div>';
 		$html .= '<div class="modal-body">';
 		$html .= '<p>' . wfMessage( 'settle-translate-intro-text' )->plain() . '</p>';
-		$select = '<select class="form-control">';
+		$select = '<select class="form-control"><option></option>';
 		foreach ( $wgSettleTranslateDomains as $lang => $domain ) {
 			$langText = Language::fetchLanguageName( $lang );
 			if ( ! $langText ) {
