@@ -75,7 +75,7 @@ class SettleTranslate {
 			if ( ! $langText ) {
 				continue;
 			}
-			$select .= '<option value="' . self::generateDomainLink( $parser, 'Card', $lang ) . '">' . $langText . '</option>';
+			$select .= '<option data-lang="'.$lang.'" value="' . self::generateDomainLink( $parser, 'Card', $lang ) . '">' . $langText . '</option>';
 		}
 		$select .= '</select>';
 		$html .= $parser->insertStripItem( $select );

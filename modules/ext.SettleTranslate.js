@@ -7,4 +7,16 @@ $(function(){
         $('#translate-window form').submit();
     });
 
+    $(document).on('show.bs.modal', '#translate-window', function(e){
+
+        var translations = window.wgPageAvailableTranslations || [];
+        $('#translate-window select option').each(function(i,v){
+            var lang = $(v).data('lang');
+            if( lang && $.inArray( lang, translations ) ) {
+                $(v).prop('disabled', true);
+            }
+        });
+
+    });
+
 });
