@@ -24,7 +24,7 @@ class SettleTranslate {
 		$parser->getOutput()->addModules( 'ext.settletranslate.window' );
 
 		$html .= $parser->insertStripItem(
-			'<a id="translate-link" href="#" type="button" class="btn btn-primary" data-toggle="modal" data-target=".translate-window"><i class="fa fa-language" ></i> '
+			'<a id="translate-link" href="#" type="button" class="btn btn-cyanide pull-right" data-toggle="modal" data-target=".translate-window"><i class="fa fa-language" ></i> '
 			. wfMessage( 'settle-translate-link-text' )->plain() . '</a>' );
 
 		$html .= '<div id="translate-window" class="modal fade bs-example-modal-sm translate-window" role="dialog">';
