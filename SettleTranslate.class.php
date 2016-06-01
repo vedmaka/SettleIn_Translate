@@ -18,6 +18,10 @@ class SettleTranslate {
 
 		$html = '';
 
+		if( !$parser->getTitle() || !$parser->getTitle()->exists() ) {
+			return '';
+		}
+
 		$currentTitle = $wgLanguageCode . ':' . $parser->getTitle()->getBaseText();
 		$selfSource = self::extractSelfSource( $parser->getTitle() );
 
@@ -97,7 +101,18 @@ class SettleTranslate {
 		return '<input type="hidden" name="'.$name.'" value="'.str_replace('"', "", str_replace( "\n", "", $value ) ).'" />';
 	}
 
+
+	/**
+	 * @param Title $title
+	 *
+	 * @return bool|mixed
+	 * @throws MWException
+	 */
 	public static function extractSelfSource( $title ) {
+
+		if( !$title->exists() ) {
+			return false;
+		}
 
 		$page = WikiPage::factory( $title );
 		$pageText = $page->getContent()->getWikitextForTransclusion();
