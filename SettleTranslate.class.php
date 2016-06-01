@@ -21,7 +21,7 @@ class SettleTranslate {
 		$currentTitle = $wgLanguageCode . ':' . $parser->getTitle()->getBaseText();
 		$selfSource = self::extractSelfSource( $parser->getTitle() );
 
-		$html .= '<div style="display: none;" class="foreign-render-list" data-currenttitle="'.$currentTitle.'" data-selfsource="'.$selfSource.'">';
+		$html .= '<div class="foreign-render-list" data-currenttitle="'.$currentTitle.'" data-selfsource="'.$selfSource.'">';
 		$html .= wfMessage( 'settle-translate-foreign-title' )->plain();
 		$html .= '<span class="foreign-list-result-text">' . wfMessage( 'settle-translate-foreign-title-not-found' )->plain() . '</span>';
 		$html .= '</div>';
