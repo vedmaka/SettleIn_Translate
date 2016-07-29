@@ -35,7 +35,7 @@
                var r = data.foreign;
                 if( r && r.length ) {
                     $.each( r, function( i, item ){
-                       self.renderItem( item['title'] + ' (' + mw.config.get('translateLangCodes')[langCode] + ')', item['link'], langCode );
+                       self.renderItem( /*item['title'] + ' (' +*/ mw.config.get('translateLangCodes')[langCode] /*+ ')'*/, item['link'], langCode );
                         itemsFound += 1;
                     });
                 }
