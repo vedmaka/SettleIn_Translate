@@ -26,7 +26,7 @@
             if( langCode.length && domains[langCode[0]] ) {
                 link = '//' + domains[langCode[0]] + '/index.php?title=' + langCode[1];
             }
-            this.renderItem( langCode[1] + ' (' +  mw.config.get('translateLangCodes')[langCode[0]] + ')', link, langCode[0] );
+            this.renderItem( /* langCode[1] + ' (' +*/  mw.config.get('translateLangCodes')[langCode[0]] /*+ ')'*/, link, langCode[0] );
             itemsFound += 1;
         }
         $.each( domains, function( langCode, domain ) {
