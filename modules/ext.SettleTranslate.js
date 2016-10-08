@@ -8,6 +8,7 @@ $(function(){
         var link = decodeURIComponent( selectedOption );
         $('#translate-window form').prop('action', link);
         $('#translate-window form').submit();
+        $('#translate-window').modal('hide');
     });
 
     $(document).on('show.bs.modal', '#translate-window', function(e){
