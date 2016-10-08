@@ -8,7 +8,7 @@
   "settle-translate-intro-text": "Пожалуйста, выберите язык на который вы хотите перевести эту страницу:",
   "settle-translate-btn-translate": "Создать превод",
   "settle-translate-modal-title": "Выбор языка",
-  "settle-translate-form-warning": "<b>Внимание!</b> Содержимое данной формы было загрудено из <b>$1</b> версии вики для вашего удобства. Пожалуйста, не сохраняйте форму в неизменном виде.",
+  "settle-translate-form-warning": "<b>Внимание!</b> Содержимое данной формы было загружено из <b>$1</b> версии вики для вашего удобства. Пожалуйста, не сохраняйте форму в неизменном виде.",
   "settle-translate-foreign-title": "Эта страница на других языках:",
   "settle-translate-foreign-title-not-found": " Нет переводов."
 }
