@@ -55,6 +55,7 @@
     };
 
     foreignQuery.prototype.init = function() {
+        // No uls anymore ?
         this.element.append( $('<ul />') );
     };
 
