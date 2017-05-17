@@ -51,7 +51,7 @@
     };
 
     foreignQuery.prototype.displayEmpty = function() {
-		this.element.append($( '<span style="font-style: italic;">' + mw.msg('settle-translate-foreign-title-not-found') + '</span>' ));
+		this.element.append($( '<span style="font-style: italic; color: white;">' + mw.msg('settle-translate-foreign-title-not-found') + '</span>' ));
 	};
 
     foreignQuery.prototype.renderItem = function( text, link, langCode )
