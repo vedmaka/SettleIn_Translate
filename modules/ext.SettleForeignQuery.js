@@ -14,7 +14,9 @@
     foreignQuery.prototype.fetchPages = function() {
         var self = this;
         var domains = mw.config.get('wgSettleTranslateDomains');
+
         if( !domains ) {
+        	this.displayEmpty();
             return false;
         }
 
@@ -41,7 +43,16 @@
                 }
             });
         });
+
+        if( itemsFound === 0 ) {
+        	this.displayEmpty();
+		}
+
     };
+
+    foreignQuery.prototype.displayEmpty = function() {
+		this.$element.append($( '<span style="font-style: italic;">' + mw.msg('settle-translate-foreign-title-not-found') + '</span>' ));
+	};
 
     foreignQuery.prototype.renderItem = function( text, link, langCode )
     {

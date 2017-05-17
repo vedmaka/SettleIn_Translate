@@ -59,6 +59,9 @@
 			"scripts": [
 				"modules/ext.SettleForeignQuery.js",
 				"modules/ext.foreign.init.js"
+			],
+			"messages": [
+				"settle-translate-foreign-title-not-found"
 			]
 		}
 	},
