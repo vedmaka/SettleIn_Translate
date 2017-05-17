@@ -16,7 +16,7 @@
         var domains = mw.config.get('wgSettleTranslateDomains');
 
         if( !domains ) {
-        	this.displayEmpty();
+        	//this.displayEmpty();
             return false;
         }
 
@@ -45,13 +45,13 @@
         });
 
         if( itemsFound === 0 ) {
-        	this.displayEmpty();
+        	//this.displayEmpty();
 		}
 
     };
 
     foreignQuery.prototype.displayEmpty = function() {
-		this.element.append($( '<span style="font-style: italic; color: white;">' + mw.msg('settle-translate-foreign-title-not-found') + '</span>' ));
+		this.element.find('.foreign-list-result-text').append( $('<span style="font-style: italic; color: white;">' + mw.msg('settle-translate-foreign-title-not-found') + '</span>' ));
 	};
 
     foreignQuery.prototype.renderItem = function( text, link, langCode )
@@ -68,6 +68,7 @@
     foreignQuery.prototype.init = function() {
         // No uls anymore ?
         this.element.append( $('<ul />') );
+        this.displayEmpty();
     };
 
     foreignQuery.prototype.addToTranslationsConfig = function( langCode, text, link )
