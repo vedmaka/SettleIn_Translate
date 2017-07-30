@@ -159,11 +159,18 @@ class SettleTranslate {
 			$html .= self::makeInput( $templateName.'[Country]', $matches[1] );
 		}
 
-		//Country
+		//Tags
 		$matches = array();
 		$match = preg_match('#\|Tags=(.+)#', $pageText, $matches);
 		if( $match ) {
 			$html .= self::makeInput( $templateName.'[Tags]', $matches[1] );
+		}
+
+		//Category
+		$matches = array();
+		$match = preg_match('#\|Category=(.+)#', $pageText, $matches);
+		if( $match ) {
+			$html .= self::makeInput( $templateName.'[Category]', $matches[1] );
 		}
 
 		//Application name
