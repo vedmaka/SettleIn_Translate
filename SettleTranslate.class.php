@@ -159,6 +159,13 @@ class SettleTranslate {
 			$html .= self::makeInput( $templateName.'[Country]', $matches[1] );
 		}
 
+		//Country_code
+		$matches = array();
+		$match = preg_match('#\|Country_code=(.+)#', $pageText, $matches);
+		if( $match ) {
+			$html .= self::makeInput( $templateName.'[Country_code]', $matches[1] );
+		}
+
 		//Tags
 		$matches = array();
 		$match = preg_match('#\|Tags=(.+)#', $pageText, $matches);
