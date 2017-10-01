@@ -166,6 +166,20 @@ class SettleTranslate {
 			$html .= self::makeInput( $templateName.'[Country_code]', $matches[1] );
 		}
 
+		//State
+		$matches = array();
+		$match = preg_match('#\|State=(.+)#', $pageText, $matches);
+		if( $match ) {
+			$html .= self::makeInput( $templateName.'[State]', $matches[1] );
+		}
+
+		//State_code
+		$matches = array();
+		$match = preg_match('#\|State_code=(.+)#', $pageText, $matches);
+		if( $match ) {
+			$html .= self::makeInput( $templateName.'[State_code]', $matches[1] );
+		}
+
 		//Tags
 		$matches = array();
 		$match = preg_match('#\|Tags=(.+)#', $pageText, $matches);
