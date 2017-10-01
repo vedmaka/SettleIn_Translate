@@ -180,6 +180,20 @@ class SettleTranslate {
 			$html .= self::makeInput( $templateName.'[State_code]', $matches[1] );
 		}
 
+		//City
+		$matches = array();
+		$match = preg_match('#\|City=(.+)#', $pageText, $matches);
+		if( $match ) {
+			$html .= self::makeInput( $templateName.'[City]', $matches[1] );
+		}
+
+		//City_code
+		$matches = array();
+		$match = preg_match('#\|City_code=(.+)#', $pageText, $matches);
+		if( $match ) {
+			$html .= self::makeInput( $templateName.'[City_code]', $matches[1] );
+		}
+
 		//Tags
 		$matches = array();
 		$match = preg_match('#\|Tags=(.+)#', $pageText, $matches);
