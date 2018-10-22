@@ -23,4 +23,9 @@ $(function(){
 
     });
 
+    $(document).on('click', '.translate-sublink', function(e){
+        e.preventDefault();
+        $('#translate-link').click();
+    });
+
 });
